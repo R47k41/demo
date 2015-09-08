@@ -1,3 +1,11 @@
 <h1>До новых встречь!</h1>
 <p>Данная страница выполняет действия метода goodbye класса SayController</p>
-<div id="SendMeBack">Для возврата на предыдущую страницу нажмите <a href="/say/hello">сюда</a></div>
+<div id="DirectoryFilesList"> Список файлов в корневой дирректории:
+	<ul id="FilesList">
+	<% @files.each do |name|%>
+		<li><%= name %></li>
+	<% end %>
+	</ul>
+</div>
+<div id="SendMeBack">Для возврата на предыдущую страницу нажмите 
+	<%= link_to("сюда", say_hello_path, :data => {:confirm => "Хотите вернуться назад?"})%></div>

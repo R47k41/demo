@@ -2,4 +2,4 @@
 <p>Это тестовое представление действия hello из класса SayController</p>
 <div id="TimeServer">Время отображения страницы - <%= @time %> (взятое с контроллера)</div>
 <div id="TimeClient">Время отображения страницы - <%= Time.now.strftime("%H:%M:%S") %> (взятое с представления)</div>
-<div id="TimeToBye"><a href="/say/goodbye">Время прощаться!</a></div>
+<div id="TimeToBye"><%= link_to("Прощальная страница", say_goodbye_path, :data => {:confirm => "Вы уверены?"})%></div>
