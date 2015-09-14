@@ -1,0 +1,49 @@
+//Описываем стиль для класса Продукт
+.products {
+	//описание тега <table>
+	table {
+		border-collapse: collpse;
+	}
+	//описания для тегов <table>, <td>, <tr>
+	table tr td {
+		padding: 5px;
+		vertical-align: center;
+		.list_actions {
+			font_size: x-small;
+			text-align: right;
+			padding-left: 1em;
+			color: red;
+		}
+	}
+	.list_image {
+		width: 150px;
+		height: 70px;
+	}
+	.list_description {
+		width: 60%;
+		dl {
+			margin: 0;
+		}
+		dt {
+			color: green;
+			font-weight: bold;
+			font-size: lagger;
+		}
+		dd {
+			margin: 0;
+		}
+	}
+	.list_line_even {
+		background: yellow;
+	}
+	.list_line_odd {
+		background: grey;
+		.list_title{
+			text-align: center;
+			font-size: large;
+			text-color: black;
+			.list_title_1{text-color: red;}
+			.list_title_2{text-color: green;}
+		}
+	}
+}

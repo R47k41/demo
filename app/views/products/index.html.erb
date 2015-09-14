@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Игровой каталог</h1>
+
+<table>
+  <thead>
+    <tr class="list_line_even">
+      <th>Наименование</th>
+      <th>Описание</th>
+      <th>Обложка</th>
+      <th>Цена</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @products.each do |product| %>
+      <tr class="list_line_odd">
+        <td>
+          <dl class = "list_title">
+            <dt class=<%= cycle("list_title_1", "list_title_2") %>><%= product.title %></dt>
+          </dl>
+        </td>
+        <td class="list_description">
+          <dl>
+            <dt>
+              <!-- <dd><%= truncate(strip_tags(product.description), :lenght => 80) %></dd> -->
+              <dd><%= product.description %></dd>
+            </dt>
+          </dl>
+        </td>
+        <td><%= image_tag(product.image_url, :class => 'list_image') %></td>
+        <td><%= product.price %></td>
+        <td class="list_actions"><%= link_to 'Просмотр', product %></td>
+        <td class="list_actions"><%= link_to 'Редактирование', edit_product_path(product) %></td>
+        <td class="list_actions"><%= link_to 'Удаление', product, method: :delete, data: { confirm: 'Вы уверены?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Добавление записи', new_product_path %>
