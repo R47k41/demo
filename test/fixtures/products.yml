@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  description: MyText
-  image_url: MyString
+Half_Life_3:
+  title: Half_Life
+  description: Game Abouts
+  image_url: logo.jpg
   price: 9.99
 
-two:
-  title: MyString
-  description: MyText
-  image_url: MyString
-  price: 9.99
+Half_Life_2:
+  title: Half Life
+  description: All about doctor Price
+  image_url: logo.png
+  price: 10.35
